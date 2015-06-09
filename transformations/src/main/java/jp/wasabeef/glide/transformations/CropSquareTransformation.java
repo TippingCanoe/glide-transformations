@@ -38,8 +38,8 @@ public class CropSquareTransformation implements Transformation<Bitmap> {
         Bitmap source = resource.get();
         int size = Math.min(source.getWidth(), source.getHeight());
 
-        mWidth = (source.getWidth() - size) / 2;
-        mHeight = (source.getHeight() - size) / 2;
+        mWidth = (int) ((source.getWidth() - size) / 2f);
+        mHeight = (int) ((source.getHeight() - size) / 2f);
 
         Bitmap.Config config =
                 source.getConfig() != null ? source.getConfig() : Bitmap.Config.ARGB_8888;
